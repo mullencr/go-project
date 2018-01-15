@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Final Project BIO 466</title>
+	</head>
+	<body>
+		<h1>Gene Ontology Project</h1>
+		<h3>File Upload</h3>
+		<p>Please select the files you would like to use to build the databases.</p>
+		<form action="read_in_terms.cgi" method="post" enctype="multipart/form-data">
+			<input name= "myfile1" type= "file">
+			<input type= "submit" name= "submit" value= "Submit"/>
+		</form>
+		
+		<h3>Clear Data Storage</h3>
+                <form action="clear_tables.cgi" method="GET">
+                        <p>Delete all of the data relevant to your annotation file</p>
+                        <p>Note: This will not delete the current recorded Gene Ontology, only the data that you've uploaded</p>
+                        <input type="hidden" name="delete" value=1>
+                        <input type="submit" name="submit" value="Delete">
+                </form>
+	
+		<h3>Gene Search</h3>
+		<p>Please enter the Gene you would like to search in the box below.</p>
+		<form action = "Gene_Query.cgi" method= "GET">
+			<b>Gene Name: </b><input type= "text" name="Gene">
+			<br/><br/>
+			<input type= "submit" name= "submit" value= "Submit"/>
+		</form>
+
+		<h3>Annotation Search</h3>
+		<p>Please enter the GO term you would like to search in the box below.</p>
+		<form action="GO_Query.cgi" method= "GET">
+			<b>GO ID: </b><input type= "text" name="GO_ID"> 
+			<br/><br/>
+			<b>Sub-Ontology: </b> <br/>
+				<input type="radio" name="sub-ontology" value="BP">  Biological Process<br/>
+				<input type="radio" name="sub-ontology" value="CC"> Cellular Component<br/>
+				<input type="radio" name="sub-ontology" value="MF"> Molecular Function<br/>
+			<br/>
+			<b>Term Description: </b><input type= "text" name="GO_Term">
+			<br/><br/>
+			<input type= "submit" name= "submit" value= "Submit"/>
+		</form>
+	</body>
+</html>
