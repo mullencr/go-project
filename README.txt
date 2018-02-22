@@ -1,6 +1,9 @@
 GO_Interface v.0.0.1
 
 ==========[OVERVIEW]===========
+>>> Introduction <<<
+Gene Ontologies are the result of a movement by the Gene Ontology Consortium on behalf of bioinformaticists everywhere to standardize the way that we describe features in genomic databases. Until recently, different taxonomies have existed between projects, between species, and between specific research groups. The Gene Ontology Consortium has created a list of classifications that can be used to describe genetic features. This program allows you to upload a generated bgo file containing genetic feature annotation, adding it to a searchable database and pulling up meta-information about the Gene Ontology. A sample file with information on Mus Musculus (House Mouse) has been included for testing.
+
 >>> Web Interface <<<
 This software application consists of a single html page and a collection of perl scripts.
 As certain tasks are performed by the user on the home page, the other perl scripts in
